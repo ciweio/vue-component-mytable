@@ -18,7 +18,7 @@
           {{ btn }}
         </button>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="+Tag"
-               v-if="item.isshow" @keyup.enter="addTag(item.tag,$event)" v-focus @blur="item.isshow=false">
+               v-if="item.isshow" @keyup.enter="addTag(index,item.tag,$event)" v-focus @blur="item.isshow=false">
         <button type="button" class="btn btn-info btn-sm" v-else @click="item.isshow=true">+
         </button>
       </td>
@@ -48,15 +48,22 @@ export default {
       item.isshow = false;
       if (item.tag) {
         item.tag = item.tag.split(',');
-        console.log(item.tag);
+        // console.log(item.tag);
       }
     }
     this.list_commodity = ret.data;
   },
   methods: {
-    addTag(tag, e) {
+    addTag(index, tag, e) {
       if (e.target.value)
-        tag.push(e.target.value);
+        if (tag) {
+          tag.push(e.target.value);
+          // console.log(tag);
+        } else {
+          this.list_commodity[index].tag = [];
+          // console.log(this.list_commodity[index].tag)
+          this.list_commodity[index].tag.push(e.target.value);
+        }
       e.target.value = '';
     },
     delItem(gid) {
