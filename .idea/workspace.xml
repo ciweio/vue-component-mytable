@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3b4c42d-9bf4-45e2-b9e3-6dbb0487408f" name="Changes" comment="init">
+    <list default="true" id="f3b4c42d-9bf4-45e2-b9e3-6dbb0487408f" name="Changes" comment="imperfection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyTable.vue" afterDir="false" />
@@ -50,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654155014387</updated>
-      <workItem from="1654155015747" duration="6429000" />
+      <workItem from="1654155015747" duration="12262000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1654158101146</created>
@@ -59,7 +59,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654158101146</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="imperfection">
+      <created>1654161513298</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654161513298</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,6 +85,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="imperfection" />
+    <option name="LAST_COMMIT_MESSAGE" value="imperfection" />
   </component>
 </project>

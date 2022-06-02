@@ -13,11 +13,14 @@
       <td>{{ item.commodityDesc }}</td>
       <td>￥{{ item.commodityPrice }}</td>
       <td>
-
-        <button type="button" class="btn btn-danger btn-sm" @click="item.isshow=true">+Tag</button>
+        <button type="button" class="btn btn-warning btn-sm"
+                v-for="btn in item.tag">
+          {{ btn }}
+        </button>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="+Tag"
-               v-if="item.isshow" @keyup.enter="addTag(item.tag,$event)">
-        <button type="button" class="btn btn-warning btn-sm">{{ item.tag }}</button>
+               v-if="item.isshow" @keyup.enter="addTag(item.tag,$event)" v-focus @blur="item.isshow=false">
+        <button type="button" class="btn btn-info btn-sm" v-else @click="item.isshow=true">+
+        </button>
       </td>
       <td>
         <button type="button" class="btn btn-danger btn-sm" @click="delItem(item.gid)">删除</button>
@@ -52,12 +55,18 @@ export default {
   },
   methods: {
     addTag(tag, e) {
-      tag.push(e.target.value);
+      if (e.target.value)
+        tag.push(e.target.value);
       e.target.value = '';
     },
     delItem(gid) {
       this.list_commodity = this.list_commodity.filter(x => x.gid !== gid)
     }
+  },
+  directives: {
+    focus(el) {
+      el.focus()
+    },
   }
 }
 </script>
@@ -66,5 +75,9 @@ export default {
 .form-control {
   display: inline;
   width: 100px;
+}
+
+.btn {
+  margin-right: 10px;
 }
 </style>
