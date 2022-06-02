@@ -6,7 +6,9 @@
       </tr>
     </thead>
     <tbody>
-
+      <tr v-for="(item, index) in data" :key="item.gid">
+        <slot name="table_body" :item="item" :index="index"></slot>
+      </tr>
     </tbody>
   </table>
 </template>
@@ -25,5 +27,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+table{
+  width: 50%;
+  margin: auto;
+}
 </style>
